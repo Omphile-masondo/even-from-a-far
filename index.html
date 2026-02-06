@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>For You 🤍</title>
+  <title>Even from afar 🤍</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Font -->
@@ -51,10 +51,20 @@
       font-weight: 400;
     }
 
-    .footer {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      opacity: 0.8;
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      background: #ff6b81;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #ff3b61;
     }
 
     /* Floating Hearts */
@@ -147,10 +157,35 @@
       Just presence.
     </p>
 
+    <!-- Interactive Buttons -->
+    <div>
+      <button onclick="showMessage('distant')">Open when you feel distant</button>
+      <p id="distant" style="display:none; margin-top:10px;">
+        Distance doesn’t mean disconnection. It just means we’re learning patience together.
+      </p>
+
+      <button onclick="showMessage('miss')">Open when you miss me</button>
+      <p id="miss" style="display:none; margin-top:10px;">
+        I miss you too — in quiet ways, in ordinary moments, in things I wish I could share in real time.
+      </p>
+
+      <button onclick="showMessage('unsure')">Open when you’re unsure</button>
+      <p id="unsure" style="display:none; margin-top:10px;">
+        You don’t have to be certain about everything. Just keep choosing presence. I’ll meet you there.
+      </p>
+    </div>
+
     <div class="footer">
       🤍 Always here, even from a distance
     </div>
   </div>
+
+  <script>
+    function showMessage(id) {
+      const p = document.getElementById(id);
+      p.style.display = (p.style.display === "none") ? "block" : "none";
+    }
+  </script>
 
 </body>
 </html>
