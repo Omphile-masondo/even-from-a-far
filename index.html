@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 🤍</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #f8d7da, #f5e6e8);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #4a2c2a;
+    }
+
+    .container {
+      max-width: 700px;
+      padding: 30px;
+      z-index: 2;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .highlight {
+      font-weight: 400;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff6b81;
+      transform: rotate(45deg);
+      animation: float 8s infinite ease-in;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff6b81;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-1000px) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hearts -->
+  <div class="heart" style="left:10%; animation-delay:0s;"></div>
+  <div class="heart" style="left:25%; animation-delay:2s;"></div>
+  <div class="heart" style="left:40%; animation-delay:4s;"></div>
+  <div class="heart" style="left:55%; animation-delay:1s;"></div>
+  <div class="heart" style="left:70%; animation-delay:3s;"></div>
+  <div class="heart" style="left:85%; animation-delay:5s;"></div>
+
+  <!-- Content -->
+  <div class="container">
+    <h1>Even from afar, I choose you</h1>
+
+    <p>
+      Distance makes love quieter,  
+      but it also makes effort louder.
+    </p>
+
+    <p class="highlight">
+      I see you.  
+      I see the way you stay now,  
+      the way you communicate,  
+      the way you try.
+    </p>
+
+    <p>
+      This page exists for one simple reason —  
+      to remind you that even miles away,  
+      you are chosen.
+    </p>
+
+    <p>
+      No pressure.  
+      No expectations.  
+      Just presence.
+    </p>
+
+    <div class="footer">
+      🤍 Always here, even from a distance
+    </div>
+  </div>
+
+</body>
+</html>
